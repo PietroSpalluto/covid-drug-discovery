@@ -111,17 +111,17 @@ def test(pos_edge_index, neg_edge_index):
 
 # Parameters
 data_path = '/content/drive/MyDrive/Colab Notebooks/BDA/'
-model_emb = ['TransE']
+model_emb = ['TransE', 'DistMult']
 margin = 4
 regul = 50
 l3_regul = 0
 threshold_auroc = 60
-embedding = [200]
-batch_dim = [50]
+embedding = [200, 250]
+batch_dim = [50, 75]
 learning_rates = [0.005]
-epochs_num = [15]
-epochs_vgae_num = [25]
-epochs_clf = [300]
+epochs_num = [15, 25]
+epochs_vgae_num = [25, 35]
+epochs_clf = [300, 350]
 mode_distmult = ['normal']
 tot_combinations_distmult = len(embedding) * len(batch_dim) * len(learning_rates) * len(epochs_num) \
                             * len(epochs_vgae_num) * len(epochs_clf) * len(mode_distmult)
